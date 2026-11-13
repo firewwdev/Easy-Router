@@ -8,7 +8,7 @@ use Firewwdev\EasyRouter\RouterValidation;
 class UserController{
 
     public function show(){
-        return 'Gabriel Gomes';
+        return '<h1>OLÁ TUDO BEM </h1>';
     }
 
 }
@@ -17,13 +17,5 @@ $controller = new UserController();
 $router = new Router();
 $val = new RouterValidation();
 
-$response = $router -> route('GET', '/users', [UserController::class, 'show']);
-echo $response;
-$response2 = $router -> route('GET', '/users', fn () => 'teste');
-echo $response2;
-
-echo $_SERVER['REQUEST_URI'];
-echo '</br>';
-var_dump($router -> explode($_SERVER['REQUEST_URI']));
-echo '</br>';
-echo $_SERVER['REQUEST_METHOD'];
+$router -> route('GET', '/users', [UserController::class, 'show']);
+$router -> route('GET', '/users', fn () => 'teste');

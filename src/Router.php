@@ -15,6 +15,10 @@ class Router
         $this -> validator = $validator ?? new RouterValidation;
     }
 
+    public function dispatch(){
+
+    }
+
     public function route(
         string $http_method, // -> Ex: 'GET', 'POST', 'PUT', 'PATCH'...
         string $route, // -> Ex: '/users/{id}' or /admin'
