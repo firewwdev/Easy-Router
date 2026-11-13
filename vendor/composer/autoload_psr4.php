@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'GabrielSantos\\Router\\' => array($baseDir . '/src'),
+    'Firewwdev\\EasyRouter\\' => array($baseDir . '/src'),
 );
